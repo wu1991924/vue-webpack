@@ -6,9 +6,9 @@ Vue.use(VueRouter);
 // 引入vue以及vue-router的。
 
 // 引入组件！
-import index from './components/app.vue';
-import list from './components/list.vue';
-import hello from './components/hello.vue';
+import index from './components/app/app';
+import list from './components/list/list';
+import hello from './components/hello/hello';
 //开启debug模式
 Vue.config.debug = true;
 
@@ -23,6 +23,7 @@ var App = Vue.extend({});
 // 创建一个路由器实例
 // 创建实例时可以传入配置参数进行定制，为保持简单，这里使用默认配置
 var router = new VueRouter();
+
 
 // 定义路由规则
 // 每条路由规则应该映射到一个组件。这里的“组件”可以是一个使用 Vue.extend
