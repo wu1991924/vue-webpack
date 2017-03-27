@@ -28,24 +28,23 @@ var router = new VueRouter();
 // 每条路由规则应该映射到一个组件。这里的“组件”可以是一个使用 Vue.extend
 // 创建的组件构造函数，也可以是一个组件选项对象。
 router.map({
-    '/index':{
-        name:'index',
-        // component:require("components/app.vue"),
-        component:index,
-        subRoutes:{
-            '/hello':{
-                name:'hello',
-                component:hello
+    '/index': {
+        name: 'index',
+        component: index,
+        subRoutes: {
+            '/hello': {
+                name: 'hello',
+                component: hello
             }
         }
     },
     '/list': {
-        name:'list',
+        name: 'list',
         component: list
     },
 });
 router.redirect({
-    '*':"/index"
+    '*': "/index"
 });
 // 现在我们可以启动应用了！
 // 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上。

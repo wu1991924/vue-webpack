@@ -23,15 +23,12 @@
 
 <template>
 <div>
-    <h1>姓名：{{name}}</h1>
-    <h2>{{age}}</h2>
     <button @click="golist">$route.router.go查看</button>
     <a v-link="{ name: 'list' }">v-link查看列表</a>
     <a v-link="{ name: 'index' }">回去主页</a>
     <a v-link="{ name: 'hello' }">嵌套的路由</a>
-    <hello></hello>
+    <div>主页</div>
     <router-view></router-view>
-
 </div>
 </template>
 

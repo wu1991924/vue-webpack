@@ -19,12 +19,18 @@
                     age: 78
                 }, ]
             }
-        }
+        },
+         methods :{
+             goHomePage (){
+                 this.$route.router.go({name:"index"});
+             }
+         }
 
     }
 </script>
 <template>
 <ul>
+    <button @click="goHomePage">$route.router.go查看</button>
     <li v-for="person in peoples">
         {{person.name}} : {{person.age}}
     </li>
